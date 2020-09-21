@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
     <title>Guess The Number</title>
   </head>
-  <body>
+  <body onload="init()">
     <main>
       <div id="welcomeScreen">
         <h2>
@@ -16,8 +16,8 @@
         <section>
           <p>Select Difficulty:</p>
           <div class="button-wrapper">
-            <button>Easy: 10 Attempts</button>
-            <button>Hard: 5 Attempts</button>
+            <button onclick="easyMode()">Easy: 10 Attempts</button>
+            <button onclick="hardMode()">Hard: 5 Attempts</button>
           </div>
         </section>
       </div>
@@ -25,7 +25,7 @@
         <button id="newGameButton">NEW GAME</button>
         <section>
           <h3 id="textOutput">Your Guess:</h3>
-          <input type="number" id="inputBox" min="1" max="100" />
+          <input type="number" id="inputBox" min="1" max="100" onchange="compareGuess()"/>
         </section>
         <section>
           <p>Current Range:</p>
@@ -48,5 +48,6 @@
         </section>
       </div>
     </main>
+    <script src="script.js"></script>
   </body>
 </html>
